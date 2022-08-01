@@ -97,7 +97,7 @@ li:hover .dropdown, .dropdown:hover {
     margin-right: 10px;
 }
 
-.mobile-menu {
+#mobile-menu {
     display: none;
 }
 
@@ -165,34 +165,35 @@ section+section {
         width: 100vw;
     }
 
-    .mobile-menu {
-        display: block;
-    }
-
     header nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
+    #mobile-menu{
+        display: block;
+        content: url('./images/icon-menu.svg');
+    }
+
     nav ul {
         background: #fff;
         right: 0;
-        top: 75px;
+        top: 50px;
         padding: 75px;
         height: 100vh;
         position: fixed;
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 10px;
     }
 
-    nav div{
+    nav div {
         position: fixed;
         bottom: 10px;
         padding: 75px;
         right: 0;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 10px;

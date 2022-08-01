@@ -17,7 +17,7 @@
   <header>
     <nav>
       <a href="#" class="logo"><img src="./images/logo.svg" alt="logo"></a>
-      <img src="./images/icon-menu.svg" alt="menu" class="mobile-menu" onClick="toggleMenu()">
+      <img alt="logo" id="mobile-menu" onclick="toggleMenu()">
       <ul id="menu">
         <li><a href="#">Features</a>
           <div class="dropdown">
@@ -37,7 +37,7 @@
         <li><a href="#">Career</a></li>
         <li><a href="#">About</a></li>
       </ul>
-      <div>
+      <div id="account">
         <a href="#">Login</a>
         <button>Register</button>
       </div>
@@ -62,7 +62,24 @@
   </main>
   <script>
     function toggleMenu() {
-
+      var x = document.getElementById("menu");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+      var y = document.getElementById("account");
+      if (y.style.display === "flex") {
+        y.style.display = "none";
+      } else {
+        y.style.display = "flex";
+      }
+      var menuIcon = document.getElementById('mobile-menu');
+      if (menuIcon.style.content == "url(\"./images/icon-close-menu.svg\")") {
+        menuIcon.style.content = "url(\"./images/icon-menu.svg\")"
+      } else {
+        menuIcon.style.content = "url(\"./images/icon-close-menu.svg\")"
+      }
     }
   </script>
 </body>
