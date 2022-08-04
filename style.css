@@ -171,9 +171,13 @@ section+section {
         align-items: center;
     }
 
-    #mobile-menu{
+    #mobile-menu {
         display: block;
         content: url('./images/icon-menu.svg');
+    }
+
+    nav {
+        position: relative;
     }
 
     nav ul {
@@ -182,26 +186,38 @@ section+section {
         top: 50px;
         padding: 75px;
         height: 100vh;
-        position: fixed;
+        position: absolute;
         display: none;
         flex-direction: column;
-        gap: 10px;
+        gap: 25px;
     }
 
     nav div {
-        position: fixed;
-        bottom: 10px;
-        padding: 75px;
-        right: 0;
         display: none;
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        z-index: 2;
+        position: absolute;
+        top: 500px;
+        left: 150px;
+    }
+
+
+    li:hover .dropdown, .dropdown:hover {
+        position: relative;
+        top: 30px;
+        left: 0;
+        margin: 0 auto;
+        width: 200px;
+
+
     }
 
     .company-dropdown {
-        margin-left: 0;
-        width: auto;
+        top: 20px;
+        margin: 0 auto;
+        width: 200px;
     }
 
     main {
